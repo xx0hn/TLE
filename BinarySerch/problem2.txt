@@ -20,4 +20,6 @@
 
 가능한 최대 팀 목표레벨 T를 출력한다.
 
+제한시간: 1초
+
 문제 출저: https://www.acmicpc.net/problem/16564
