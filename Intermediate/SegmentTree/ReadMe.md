@@ -44,17 +44,17 @@ treeIndex의 왼쪽 자식은 start부터 mid 까지의 합, 오른쪽 자식은
 위에서 본 트리에서 구간 \[2,4\]의 합을 찾아보자.  
 먼저 트리의 루트 부분은 구간 \[0,6\]이다.  
 즉, 우리가 탐색할 구간이 단말 노드의 구간에 겹쳐 있다. 따라서 이를 좌우로 나누어 다시 탐색하여야 한다.
-![세그먼트_트리_탐색1](https://raw.githubusercontent.com/leeminseokdankook/TLE/main/Intermeditae/SegmentTree/Serch1.png)  
+![세그먼트_트리_탐색1](https://raw.githubusercontent.com/leeminseokdankook/TLE/main/Intermediate/SegmentTree/Serch1.png)  
 먼저 왼쪽 구간을 보자. 이 노드의 구간 역시 \[2,4\]과 겹쳐 있으니 다시 좌우로 나누어 탐색한다.  
-![세그먼트_트리_탐색2](https://raw.githubusercontent.com/leeminseokdankook/TLE/main/Intermeditae/SegmentTree/Serch2.png)  
+![세그먼트_트리_탐색2](https://raw.githubusercontent.com/leeminseokdankook/TLE/main/Intermediate/SegmentTree/Serch2.png)  
 이 순간, 왼쪽 구간 \[0,1\] 은 \[2,4\]와 겹쳐 있지 않으므로 탐색하지 않는다.  
 오른쪽 구간 \[2,3\]은 \[2,4\]의 일부분이다. 따라서 오른쪽 트리에선 더 탐색할 필요가 없이 이 구간의 합을 반환한다.
-![세그먼트_트리_탐색3](https://raw.githubusercontent.com/leeminseokdankook/TLE/main/Intermeditae/SegmentTree/Serch3.png)  
+![세그먼트_트리_탐색3](https://raw.githubusercontent.com/leeminseokdankook/TLE/main/Intermediate/SegmentTree/Serch3.png)  
 이제 루트의 오른쪽 부분을 탐색한다.  
 오른쪽 트리의 구간 \[4,6\]은 \[2,4\]와 겹쳐 있다. 따라서 다시 좌우로 나누어 탐색한다.
-![세그먼트_트리_탐색4](https://raw.githubusercontent.com/leeminseokdankook/TLE/main/Intermeditae/SegmentTree/Serch4.png)  
+![세그먼트_트리_탐색4](https://raw.githubusercontent.com/leeminseokdankook/TLE/main/Intermediate/SegmentTree/Serch4.png)  
 위의 과정을 똑같이 진행하게 되면 다음과 같은 탐색을 하게 된다.
-![세그먼트_트리_탐색5](https://raw.githubusercontent.com/leeminseokdankook/TLE/main/Intermeditae/SegmentTree/Serch.png)  
+![세그먼트_트리_탐색5](https://raw.githubusercontent.com/leeminseokdankook/TLE/main/Intermediate/SegmentTree/Serch.png)  
 따라서 어느 구간이든 최악의 경우, 트리의 높이만큼 탐색을 하게 되므로 구간합을 구하는데 O(logN) 만큼의 시간이 소요된다. 
 
 이는 다음과 같이 표현할 수 있다.
@@ -69,7 +69,7 @@ function Sum(left,right, start, end, node):
 ```
 # 갱신
 만약 a3이 갱신 되었다 가정해보자. 그렇다면 우린 트리내부에서 a3가 포함된 구간을 모두 갱신하면 된다.
-![세그먼트_트리_갱신1](https://raw.githubusercontent.com/leeminseokdankook/TLE/main/Intermeditae/SegmentTree/Update1.png)  
+![세그먼트_트리_갱신1](https://raw.githubusercontent.com/leeminseokdankook/TLE/main/Intermediate/SegmentTree/Update1.png)  
 이 경우, 트리의 높이만큼 탐색을 하므로 O(logN) 만큼의 시간이 걸린다.
 
 ```
