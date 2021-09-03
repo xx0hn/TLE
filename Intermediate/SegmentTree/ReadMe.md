@@ -28,7 +28,7 @@
 따라서 필요한 노드의 크기는 2*(H+1)-1 이다.
 트리는 다음과 같은 과정으로 만들 수 있다.
 ```
-//SegmentTree[treeIndex]=PartialSum(begin,last)
+//SegmentTree[node]=PartialSum(begin,last)
 function MakeSegmentTree(begin, last, node):
   if(begin==last):
       return SegmentTree[node]=array[begin]
