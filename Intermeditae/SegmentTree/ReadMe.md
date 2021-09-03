@@ -50,7 +50,7 @@ start=2, end=5 라 해보자.
 먼저 왼쪽 구간을 보자. 이 노드의 구간 역시 \[2,4\]과 겹쳐 있으니 다시 좌우로 나누어 탐색한다.  
 ![세그먼트_트리_탐색2](https://raw.githubusercontent.com/leeminseokdankook/TLE/main/Intermeditae/SegmentTree/Serch2.png)  
 이 순간, 왼쪽 구간 \[0,1\] 은 \[2,4\]와 겹쳐 있지 않으므로 탐색하지 않는다.  
-오른쪽 구간 \[2,3\]은 \[2,5\]의 일부분이다. 따라서 오른쪽 트리에선 더 탐색할 필요가 없이 이 구간의 합을 반환한다.
+오른쪽 구간 \[2,3\]은 \[2,4\]의 일부분이다. 따라서 오른쪽 트리에선 더 탐색할 필요가 없이 이 구간의 합을 반환한다.
 ![세그먼트_트리_탐색3](https://raw.githubusercontent.com/leeminseokdankook/TLE/main/Intermeditae/SegmentTree/Serch3.png)  
 이제 루트의 오른쪽 부분을 탐색한다.  
 오른쪽 트리의 구간 \[4,6\]은 \[2,4\]와 겹쳐 있다. 따라서 다시 좌우로 나누어 탐색한다.
@@ -62,9 +62,9 @@ start=2, end=5 라 해보자.
 이는 다음과 같이 표현할 수 있다.
 ```
 function Sum(left,right, start, end, node):
-  if(start>right||end<left):  //현재 구간이 \[left,right\]이 \[start,end\] 에 포함되지 않으면
+  if(start>right||end<left):  //현재 구간이 [left,right]이 [start,end] 에 포함되지 않으면
     return 0
-  if(start<=left&&right<=end):  //현재 구간 \[left,right\]이 \[start,end\] 에 포함된다면
+  if(start<=left&&right<=end):  //현재 구간 [left,right]이 [start,end] 에 포함된다면
     return SegmentTree[node]
   mid=(left+right)/2
   return Sum(left,mid,start,end,node*2)+Sum(mid+1,right, start, end, node*2+1)
