@@ -16,10 +16,10 @@
 * 단말 노드: 왼쪽 자식 노드와 오른쪽 자식 노드의 합
 노드의 번호가 x일때 왼쪽 자식 노드는 x\*2,오른쪽 자식노드는 x\*2+1 이다.  
 만약 배열의 크기가 7이라면 다음과 같은 형태의 세그먼트 트리가 형성된다.
-![세그먼트_트리](https://raw.githubusercontent.com/leeminseokdankook/TLE/main/Intermeditae/SegmentTree/image.png)  
+![세그먼트_트리](https://raw.githubusercontent.com/leeminseokdankook/TLE/main/Intermediate/SegmentTree/image.png)  
 빨간 색 노드는 단말노드, 하얀 색 노드는 리프 노드이다.
 각 노드의 번호는 다음과 같다.
-![세그먼트_트리_노드번호](https://raw.githubusercontent.com/leeminseokdankook/TLE/main/Intermeditae/SegmentTree/image2.png)  
+![세그먼트_트리_노드번호](https://raw.githubusercontent.com/leeminseokdankook/TLE/main/Intermediate/SegmentTree/image2.png)  
 
 # 생성과정
 만약 배열의 크기 N이 2의 n제곱 꼴이면 트리는 완전 이진 트리의 형태를 보인다. 이 때, 트리의 높이는 logN이다.  
