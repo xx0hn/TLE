@@ -6,7 +6,7 @@
 * PartialSum(start,end)=Sum(end)-Sum(start-1) //1<=start<=end<=n  
 ```
 이 과정은 모든 i(1<=i<=n) 에 대하여 Sum(i) 를 미리 구하는 과정은 O(n)이고  
-이를 미리 저장해둔다면 partialSum 함수의 수행시간은 O(1) 이다. 
+이를 미리 저장해둔다면 PartialSum 함수의 수행시간은 O(1) 이다. 
 만약 이때 ai (1<=i<=n)이 바뀐다면 Sum(i)~Sum(n) 의 모든 값을 바꿔야 한다.  
 즉, 이 과정은 O(n) 의 시간이 걸린다. 그렇다면 빠르게 갱신할 수 있는 방법은 없을까?
 # 세그먼트 트리
@@ -42,8 +42,6 @@ treeIndex의 왼쪽 자식은 start부터 mid 까지의 합, 오른쪽 자식은
 재귀적으로 수행하여 트리를 만들면 된다.
 # 합 찾기
 위에서 본 트리에서 구간 \[2,4\]의 합을 찾아보자.  
-start=2, end=5 라 해보자.
-그리고 각 트리의 단말 노드의 구간합의 범위를 \[left, right\]라 하자.  
 먼저 트리의 루트 부분은 구간 \[0,6\]이다.  
 즉, 우리가 탐색할 구간이 단말 노드의 구간에 겹쳐 있다. 따라서 이를 좌우로 나누어 다시 탐색하여야 한다.
 ![세그먼트_트리_탐색1](https://raw.githubusercontent.com/leeminseokdankook/TLE/main/Intermeditae/SegmentTree/Serch1.png)  
