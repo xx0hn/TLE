@@ -5,7 +5,7 @@
 int main() {
 	int rest[202];
 	int n, m, l;//n:현재 휴게소 개수, m:더 지으려는 휴게소 개수, l:고속도로 길이
-	scanf_s("%d %d %d", &n, &m, &l);
+	scanf("%d %d %d", &n, &m, &l);
 	if (n < 1 || n>100)//n<=100
 		return -1;
 	else if (m < 1 || m>100)//m<=100
@@ -17,7 +17,7 @@ int main() {
 	rest[0] = 0;//시작점
 	rest[n + 1] = l;//끝점
 	for (int i = 1; i < n + 1; i++) {//휴게소 위치 입력
-		scanf_s("%d", &rest[i]);
+		scanf("%d", &rest[i]);
 	}
 	std::sort(rest, rest + n + 1);//작은 수부터 왼쪽정렬
 	int max = 0;
