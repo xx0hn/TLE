@@ -14,3 +14,5 @@
 ####출력####
 
 첫째 줄에 N번째 감소하는 수를 출력한다.
+
+출저: https://www.acmicpc.net/problem/1038
