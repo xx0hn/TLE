@@ -29,4 +29,4 @@ N개의 수로 이루어진 1차원 배열이 있다. 이 배열을 M개 이하�
 첫째 줄에 구간의 점수의 최댓값의 최솟값을 출력한다.
 
 제한시간: 1초
-문제 출저: https://www.acmicpc.net/problem/13397
+문제 출처: https://www.acmicpc.net/problem/13397

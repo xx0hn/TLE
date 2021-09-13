@@ -16,4 +16,4 @@
 
 각 테스트 케이스마다 한 줄에 정답을 출력한다. 가능할 경우 "valid", 불가능할 경우 "invalid"를 출력한다.
 
-출저:https://www.acmicpc.net/problem/7682
+출처:https://www.acmicpc.net/problem/7682

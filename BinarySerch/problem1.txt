@@ -19,4 +19,4 @@
 
 제한시간: 1초
 
-문제 출저: https://www.acmicpc.net/problem/3896
+문제 출처: https://www.acmicpc.net/problem/3896

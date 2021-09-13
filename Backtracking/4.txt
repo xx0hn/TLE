@@ -20,4 +20,4 @@
 
 첫째 줄에 K개의 음식 조리가 완료되는 최소 시간을 출력한다.
 
-출저:https://www.acmicpc.net/problem/22953
+출처:https://www.acmicpc.net/problem/22953

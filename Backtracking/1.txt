@@ -18,4 +18,5 @@ N개의 자연수와 자연수 M이 주어졌을 때, 아래 조건을 만족하
 수열은 사전 순으로 증가하는 순서로 출력해야 한다.
 
 제한시간: 1초
-문제 출저:https://www.acmicpc.net/problem/15665
+
+문제 출처:https://www.acmicpc.net/problem/15665

@@ -23,4 +23,4 @@ L은 100보다 크거나 같고, 1000보다 작거나 같은 정수이다. 모�
 
 제한시간 2초
 
-문제 출저: https://www.acmicpc.net/problem/1477
+문제 출처: https://www.acmicpc.net/problem/1477
