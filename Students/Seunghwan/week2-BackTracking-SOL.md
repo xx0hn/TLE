@@ -3,10 +3,10 @@
 - 연산자 끼워넣기 (2)
 - 감소하는 수
 
-1. N과 M (11)
+## 1. N과 M (11)
 https://www.acmicpc.net/problem/15665
 
-## 접근방법
+### 접근방법
 이번 문제는 백트레킹 알고리즘을 활용하여 해결하였다. 문제의 조건없이 출력하는 것은 쉽지만 같은 수를 여러 번 골라도 되지만 길이M의 수열끼리는 중복을 허용하지 않는다는 조건에서 생각이 필요했다.
 
 - bool형 num_chk 배열을 통해 입력된 값이 존재하는지 확인한다.
@@ -17,7 +17,7 @@ https://www.acmicpc.net/problem/15665
 - 만약 cnt가 m과 크기가 같아지면 result배열을 출력한다.
 
 처음에는 DFS 안에서 중복을 제거하려다가 시간초과가 발생하였고, 이를 입력 과정에서 제거하는 방식으로 변경하여 시간을 단축시켰다.
-## 구현
+### 구현
 ```c++
 #include <iostream>
 #include <algorithm>
@@ -66,10 +66,10 @@ int main(){
 }
 ```
 
-2. 연산자 끼워넣기 (2)
+## 2. 연산자 끼워넣기 (2)
 https://www.acmicpc.net/problem/15658
 
-## 접근방법 (C++)
+### 접근방법 (C++)
 이번 문제는 백트레킹을 통해 해결하였다.
 
 - DFS의 인자를 현재 인덱스+1,누적된 결과값, +갯수, -갯수, *갯수, /갯수로 정의한다.
@@ -79,7 +79,7 @@ https://www.acmicpc.net/problem/15658
 
 그리고 maxi와 mini의 초기값을 설정할 때, result가 음수인 경우를 생각하지 못하고, mini는 10억으로 설정하였지만, maxi를 0으로 설정하여 오답처리 되었다. 이를 maxi=-10억, mini=10억하여 해결하였다.
 
-## 구현 (C++)
+### 구현 (C++)
 ```c++
 #include <iostream>
 #include <algorithm>
@@ -138,14 +138,14 @@ int main(){
 }
 ```
 
-## 접근방법 (Python)
+### 접근방법 (Python)
 파이썬으로도 해결해보았다. C++ 코드와 조금은 다르게 풀어보았다.
 
 - DFS의 인자를 줄이는 대신에 DFS 재귀호출 이후 갯수를 줄였던 연산자의 갯수를 다시 늘린다.
 - maxi, mini의 값은 python 내장함수인 max, min을 사용하여 구하였다.
 나누기 부분에서 계속해서 오답처리가 되었고, result//arr[cur]을 int(result/arr[cur])로 변경하자 해결되었다. 문제의 나눗셈이 C++14 기준을 따라서 그런 것 같다.
 
-## 구현 (Python)
+### 구현 (Python)
 ```python
 n=int(input())
 arr=list(map(int, input().split()))
@@ -184,10 +184,10 @@ print(maxi)
 print(mini)
 ```
 
-3. 감소하는 수
+## 3. 감소하는 수
 https://www.acmicpc.net/problem/1038
 
-## 접근방법 (C++)
+### 접근방법 (C++)
 이번 문제는 백트레킹을 활용하는 문제였다. 처음에 고민했던 것은 결과값을 n을 입력 받은 후에 구할지, 미리 결과값을 배열로 저장해둘지 결정하는 것이었다. 본인은 결과값들을 배열에 저장하기로 하였다.
 
 우선 조건으로 명시되어야 하는 것이 앞의 자리가 가장 커야한다는 것이었고, 그 다음 자리 수들은 각자의 앞의 자리보다 작아야한다는 것이었다. 이 값들을 검증하고 넣기 위해 result를 vector로 만들었다.
@@ -201,7 +201,7 @@ https://www.acmicpc.net/problem/1038
 - 입력된 n이 result vector의 크기보다 크다면 이는 범위를 벗어나므로 -1을 출력해준다.
 - 그 외의 경우에는 result[n]을 출력해준다.
 
-## 구현 (C++)
+### 구현 (C++)
 ```c++
 #include <iostream>
 #include <vector>
@@ -250,10 +250,10 @@ int main(){
 }
 ```
 
-## 접근방법 (Python)
+### 접근방법 (Python)
 C++로 풀어봤던 문제를 python으로 다시 풀어보았다. 확실히 python은 내장함수가 많아서 코드가 짧게 나오는 것 같다. append와 len, sorted 등을 사용하였다.
 
-## 구현 (Python)
+### 구현 (Python)
 ```python
 n=int(input())
 result=[]
