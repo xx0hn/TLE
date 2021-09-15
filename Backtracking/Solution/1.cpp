@@ -16,12 +16,13 @@ void DFS(vector<int>& arr, vector<int>& output, int m)
 	}
 	else
 	{
-		vector<int> used;
+		int last_used(-1)
 		for(int i=0;i<arr.size();++i)
 		{
-			if(binary_search(used.begin(), used.end(),arr[i]))continue;
+			if(last_used==arr[i])continue;
+			
 			output.push_back(arr[i]);
-			used.push_back(arr[i]);
+			last_used=arr[i];
 			DFS(arr,output,m);
 			output.pop_back();
 		}
